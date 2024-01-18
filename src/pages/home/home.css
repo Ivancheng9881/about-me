@@ -1,0 +1,104 @@
+div {
+    color: #2D2E32
+}
+
+.container {
+    width: 100%;
+    border: 2px solid red;
+    background-color:#F9F9F9;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    border: 2px solid blue;
+    transform: scale(1)
+}
+
+.card {
+    border: 2px hotpink;
+    text-align: left;
+    max-width: 25rem;
+}
+
+.title {
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.link-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.buttons {
+    margin-right: 10px;
+}
+
+.sub-heading {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #5A5A5A;
+    font-family: 'Mulish',sans-serif;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+/* .hero-img {
+    -webkit-animation: morph 8s ease-in-out infinite;
+    animation: morph 8s ease-in-out infinite;
+    background-image: url(/src/images/portfolioPic.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid #2d2e32;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    height: 35rem;
+    position: relative;
+    transition: all 1s ease-in-out;
+    width: 35rem;
+} */
+
+.hero-img {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+}
+
+@media (max-width: 580px) {
+  .card {
+    text-align: center;
+  }
+
+  .link-buttons {
+    justify-content: center;
+  }
+}
